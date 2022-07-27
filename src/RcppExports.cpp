@@ -10,6 +10,16 @@ Rcpp::Rostream<true>&  Rcpp::Rcout = Rcpp::Rcpp_cout_get();
 Rcpp::Rostream<false>& Rcpp::Rcerr = Rcpp::Rcpp_cerr_get();
 #endif
 
+// computeVPBcpp
+List computeVPBcpp();
+RcppExport SEXP _newTDAvec_computeVPBcpp() {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    rcpp_result_gen = Rcpp::wrap(computeVPBcpp());
+    return rcpp_result_gen;
+END_RCPP
+}
 // rcpp_hello
 List rcpp_hello();
 RcppExport SEXP _newTDAvec_rcpp_hello() {
@@ -22,6 +32,7 @@ END_RCPP
 }
 
 static const R_CallMethodDef CallEntries[] = {
+    {"_newTDAvec_computeVPBcpp", (DL_FUNC) &_newTDAvec_computeVPBcpp, 0},
     {"_newTDAvec_rcpp_hello", (DL_FUNC) &_newTDAvec_rcpp_hello, 0},
     {NULL, NULL, 0}
 };
