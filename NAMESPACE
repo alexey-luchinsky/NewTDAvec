@@ -1,3 +1,5 @@
 exportPattern("^[[:alpha:]]+")
 importFrom(Rcpp, evalCpp)
-useDynLib(newTDAvec, .registration = TRUE)
+importFrom("stats", "pnorm")
+useDynLib(TDAvec, .registration = TRUE)
+
